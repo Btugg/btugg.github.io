@@ -42,19 +42,18 @@
     <iframe id="clip" src="" allowfullscreen></iframe>
 
     <script>
-      const clips = [
-  "https://www.youtube.com/embed/oHg5SJYRHA0",
-  "https://www.youtube.com/embed/_pLdID5uVpM",
-  "https://www.youtube.com/embed/qM7P5xhZ1B0",
-  "https://www.youtube.com/embed/5CsV3bEvvYg",
-  "https://www.youtube.com/embed/7B7Y2wJtM5g"
+  <script>
+const clips = [
+  "https://www.youtube.com/embed/LKjJt9RiCRw",
+  "https://www.youtube.com/embed/Dh6BhWT7fXw",
+  "https://www.youtube.com/embed/2aDgxFYpwhk"
 ];
 
+function showRandomClip() {
+  const randomIndex = Math.floor(Math.random() * clips.length);
+  document.getElementById('clip').src = clips[randomIndex];
+}
+</script>
 
-      function showRandomClip() {
-        const randomIndex = Math.floor(Math.random() * clips.length);
-        document.getElementById("clip").src = clips[randomIndex];
-      }
-    </script>
   </body>
 </html>
