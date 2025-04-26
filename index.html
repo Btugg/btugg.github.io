@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rastgele Anime Klibi</title>
+    <style>
+      body {
+        background-color: #0a0a0a;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 1.5rem;
+        background-color: #ff4b5c;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-bottom: 20px;
+        transition: background 0.3s;
+      }
+      button:hover {
+        background-color: #ff1f3d;
+      }
+      iframe {
+        width: 560px;
+        height: 315px;
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(255, 75, 92, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="showRandomClip()">Rastgele Klip!</button>
+    <iframe id="clip" src="" allowfullscreen></iframe>
+
+    <script>
+      const clips = [
+        "https://www.youtube.com/embed/f9YJ8HqD6jY", // Komik sahne
+        "https://www.youtube.com/embed/VxO4Pz5iD84", // Epic dövüş sahnesi
+        "https://www.youtube.com/embed/5qap5aO4i9A", // Chill anime anı
+        "https://www.youtube.com/embed/Qt1YNF9f3Xw", // Shounen power up
+        "https://www.youtube.com/embed/KHG0n7_9kHc", // Random komik an
+      ];
+
+      function showRandomClip() {
+        const randomIndex = Math.floor(Math.random() * clips.length);
+        document.getElementById("clip").src = clips[randomIndex];
+      }
+    </script>
+  </body>
+</html>
